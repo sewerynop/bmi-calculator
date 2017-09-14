@@ -15,19 +15,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelWynik: UILabel!
     @IBOutlet weak var btnGO: UIButton!
     
-    var wzrost:Float!
-    var waga:Float!
-    var wzrosta:Float!
+    var height:Float!
+    var weight:Float!
+    var heighta:Float!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // po kliknięciu w pole text pojawia się klawiatura którą zdefiniowałem poniżej
         textWzrost.keyboardType = UIKeyboardType.numbersAndPunctuation
         textWaga.keyboardType = UIKeyboardType.numbersAndPunctuation
-        //textWzrost.keyboardType = UIKeyboardType.numberPad
         
     }
 
@@ -40,35 +38,28 @@ class ViewController: UIViewController {
     
     @IBAction func BtnAkcja(_ sender: UIButton, forEvent event: UIEvent) {
         
-        // Definiowanie przycisku alertu
-        let title = "BŁĄD!" // Tytuł okna
-        let message = "Uzupełnij prawidłowo wszystkie pola"  // Wiadomość jaka się wyświetli
-        let textOK = "OK" // Przycisk OK
+        let title = "BŁĄD!"
+        let message = "Uzupełnij prawidłowo wszystkie pola"
+        let textOK = "OK"
         
-        // Zdefiniowanie przycisku i ( co on zawiera )
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         
-        // zdefiniowanie przycisku OK
         let okButton = UIAlertAction(title: textOK, style: UIAlertActionStyle.cancel, handler: nil)
         alert.addAction(okButton)
         
         
-        let wzrost = Float(textWzrost.text!) // / 100
-        let waga = Float(textWaga.text!)
+        let height = Float(textWzrost.text!)
+        let weight = Float(textWaga.text!)
         
-        if wzrost != nil && waga != nil {    // <- warunek aby nie wyświetlało sie nil gdy pole text jest puste
+        if  height != nil && weight != nil {
      
-        let wynik = waga! / (wzrost! * wzrost!) // (wzrost! * wzrost!) / waga!
-        //let wzrosta = Float(textWzrost.text!)! / 100
-        labelWynik.text = String(format: "%.2f", wynik) // skraca liczby po przecinku -- Int(format: "%.2f", wynik)
-        
+        let wynik = weight! / (height! * height!)
+        labelWynik.text = String(format: "%.2f", wynik)
         
         }else{
-            // wywołanie okienka alert
-            present(alert, animated: true, completion: nil)
-            //self.labelWynik.text = "Uzupełnij"
-        }
 
+            present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func btnClean(_ sender: Any) {
@@ -78,7 +69,6 @@ class ViewController: UIViewController {
     }
     
     
-    // chowanie klawiatury kliknięcie w tło
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

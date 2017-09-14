@@ -22,6 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-bmi" translatesAutoresizingMaskIntoConstraints="NO" id="eK2-OV-Ozv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.75" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cQ4-ih-cqS">
                                 <rect key="frame" x="169" y="142" width="150" height="30"/>
                                 <constraints>
@@ -39,7 +42,7 @@
                                     <constraint firstAttribute="height" constant="31" id="mCe-NH-frL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mG4-lT-NxO">
@@ -61,7 +64,7 @@
                                     <constraint firstAttribute="height" constant="21" id="c4B-5q-KpN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="podaj wagę:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEV-Vc-7MI">
@@ -71,7 +74,7 @@
                                     <constraint firstAttribute="width" constant="93" id="leC-oj-iVX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="80" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UA6-ee-chJ">
@@ -113,12 +116,16 @@
                             <constraint firstItem="UA6-ee-chJ" firstAttribute="leading" secondItem="AEV-Vc-7MI" secondAttribute="trailing" constant="65" id="Leh-Jm-c15"/>
                             <constraint firstItem="uon-FF-nOe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="11" id="ODy-pA-Cqe"/>
                             <constraint firstItem="cQ4-ih-cqS" firstAttribute="leading" secondItem="uon-FF-nOe" secondAttribute="trailing" constant="55" id="RD9-Ta-Wz3"/>
+                            <constraint firstItem="eK2-OV-Ozv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UVS-XC-wsa"/>
                             <constraint firstItem="cQ4-ih-cqS" firstAttribute="top" secondItem="4fd-Y9-LAV" secondAttribute="bottom" constant="62" id="XAC-Zh-Abb"/>
                             <constraint firstItem="mG4-lT-NxO" firstAttribute="top" secondItem="UA6-ee-chJ" secondAttribute="bottom" constant="92" id="bpM-Dc-Zy5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4fd-Y9-LAV" secondAttribute="trailing" constant="119" id="fBG-yP-y4F"/>
                             <constraint firstItem="cQ4-ih-cqS" firstAttribute="leading" secondItem="uon-FF-nOe" secondAttribute="trailing" constant="55" id="jow-um-cc1"/>
                             <constraint firstItem="D04-p0-CRC" firstAttribute="top" secondItem="mG4-lT-NxO" secondAttribute="bottom" constant="64" id="lBq-2S-jCz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eK2-OV-Ozv" secondAttribute="bottom" id="nwf-Wo-po1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cQ4-ih-cqS" secondAttribute="trailing" constant="40" id="qfY-ut-Grd"/>
+                            <constraint firstItem="eK2-OV-Ozv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tT5-GX-aRI"/>
+                            <constraint firstAttribute="trailing" secondItem="eK2-OV-Ozv" secondAttribute="trailing" id="vMC-jH-Vk4"/>
                             <constraint firstItem="uon-FF-nOe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="127" id="wAc-Yf-NEW"/>
                             <constraint firstItem="AEV-Vc-7MI" firstAttribute="top" secondItem="uon-FF-nOe" secondAttribute="bottom" constant="89" id="yKP-G8-n7Z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UA6-ee-chJ" secondAttribute="trailing" constant="40" id="ztm-W6-rXd"/>
@@ -136,4 +143,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg-bmi" width="750" height="1334"/>
+    </resources>
 </document>

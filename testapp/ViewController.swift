@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     
     var height:Float!
     var weight:Float!
-    var heighta:Float!
     
 
     override func viewDidLoad() {
@@ -52,9 +51,9 @@ class ViewController: UIViewController {
         let weight = Float(textWaga.text!)
         
         if  height != nil && weight != nil {
-     
-        let wynik = weight! / (height! * height!)
-        labelWynik.text = String(format: "%.2f", wynik)
+            _ = height! / 100
+        let score = weight! / (height! * height!)
+        labelWynik.text = String(format: "%.2f", score)
         
         }else{
 
